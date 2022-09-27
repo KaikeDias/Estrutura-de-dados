@@ -19,8 +19,9 @@ class No{
 template <typename T>
 class Fila{
     private:
-		No<T> *inicio = nullptr;
-		No<T> *fim = nullptr;
+		No<T> *_inicio = nullptr;
+		No<T> *_fim = nullptr;
+        int count = 0;
 	
     public:
 		Fila(){}
@@ -30,56 +31,75 @@ class Fila{
             item->valor = n;
 
             if(isEmpty()){
-                inicio = item;
-                fim = item;
+                _inicio = item;
+                _fim = item;
             }else{
-                fim->prox = item;
-                fim = item;
+                _fim->prox = item;
+                _fim = item;
             }
+
+            count++;
 		}
 		
 		T deQueue(){
-            T valor = inicio->valor;
+            if(isEmpty()){
+                throw exception();
+            }
 
-			inicio = inicio->prox;
+            count--;
+ 
+            T valor = _inicio->valor;
             
+            if(isEmpty()){
+                free(_inicio);
+                _inicio = nullptr;
+                _fim = nullptr;
+            }else{
+                No<T> *novoInicio = _inicio->prox;
+                free(_inicio);
+                _inicio = novoInicio;
+            }
 
             return valor;
 		}
 		
 		bool isEmpty(){
-			return (inicio == NULL);
+			return count == 0;
 		}
 	
-	    void popAll(){
-	    	
-	    	
+	    void clear(){
+	    	while(!isEmpty()){
+                cout << deQueue() << endl;
+            }
 		}
 
         T inicio(){
             if(!isEmpty()){
-                return inicio->valor;
+                return _inicio->valor;
             }else{
                 cout << "Erro fila vazia" << endl;
-                throw exception;
+                throw exception();
             }
         }
 
         T fim(){
             if(!isEmpty()){
-                return fim->valor;
+                return _fim->valor;
             }else{
                 cout << "Erro fila vazia" << endl;
-                throw exception;
+                throw exception();
             }
         }
 };
 
 int main(){
-	
-	
-    
-	
+	Fila<char> fila01 = Fila<char>();
+    fila01.enQueue('K');
+    fila01.enQueue('a');
+    fila01.enQueue('i');
+    fila01.enQueue('k');
+    fila01.enQueue('e');
 
+    fila01.clear();
 	
 }
