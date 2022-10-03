@@ -9,6 +9,7 @@ int main(){
 
     char letra;
     int cont = 0;
+    int resp;
 
     do{
         cout << "Digite a letra: ";
@@ -28,8 +29,10 @@ int main(){
             }
         }
 
+        cout << "Deseja continuar? (1- Sim 2- Nao)";
+        cin >> resp;
         cont++;
-    }while(cont < 3);
+    }while(resp == 1);
 
     for(int i = 0; i < cont; i++){
         cout << l1->pop() << endl;
