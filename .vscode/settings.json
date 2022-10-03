@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "array": "c",
+        "*.tcc": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "algorithm": "c",
+        "functional": "c",
+        "memory": "c",
+        "numeric": "c",
+        "random": "c",
+        "system_error": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "cmath": "c",
+        "fstream": "c",
+        "utility": "c",
+        "stack": "cpp",
+        "*.exe": "cpp",
+        "iostream": "cpp"
+    }
+}
