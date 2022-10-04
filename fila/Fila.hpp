@@ -1,15 +1,17 @@
 #include <iostream>
  
 using namespace std;
- 
+
+typedef int itemF;
+
 class No {
  
 	public:
  
-		char valor;
+		itemF valor;
 		No* prox;
  
-		No(char n){
+		No(itemF n){
 			valor = n;
 			prox = NULL;
 		}
@@ -27,7 +29,7 @@ class Fila {
 			fim = NULL;
 		}
  
-		void append(char n) {
+		void append(itemF n) {
 			if(isEmpty()) {
                 inicio = new No(n);
                 fim = inicio;
@@ -38,9 +40,9 @@ class Fila {
 			}
 		}
  
-		char pop() {
+		itemF pop() {
 			if(!isEmpty()) {
-                char valor = inicio->valor;
+                itemF valor = inicio->valor;
                 No* aux = inicio;
                 inicio = inicio->prox;
                 free(aux);
