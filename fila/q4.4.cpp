@@ -23,5 +23,5 @@ int main(){
         }
     }
     
-    //Ordem de conclusão 22 >> 43 >> 11 >> 33
+    //Ordem de conclusão 22 >> 43 >> 11 >> 33 que significa respectivamente 17 >> 25 >> 46 >> 39 
 }
