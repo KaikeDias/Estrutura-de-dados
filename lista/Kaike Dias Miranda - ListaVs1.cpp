@@ -13,7 +13,6 @@ int contarElementos = 0;
 //retorna a posicao do elemento procurado
 int procura(int mat){	
 	int tam = contarElementos;
-	bool existe = false;
 
 	for(int i = 0; i < tam; i++){
 		if(lista[i].mat == mat){
@@ -92,9 +91,9 @@ main(){
 	incluirDesordenado(aluno3);
 	incluirDesordenado(aluno4);
 
-	remover01(aluno1.mat);
+	remover01(1);
 
-	consultar(aluno1.mat);
+	consultar(4);
 	
 	
 }
