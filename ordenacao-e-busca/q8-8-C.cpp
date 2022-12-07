@@ -1,3 +1,5 @@
+//Dupla: Kaike Dias Miranda e Kelson Eduardo de Carvalho Soares Filho
+
 #define troca(a, b) {int x = a; a = b; b = x; }
 
 int particiona(int v[], int p, int u) {

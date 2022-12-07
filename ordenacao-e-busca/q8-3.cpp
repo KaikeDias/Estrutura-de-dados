@@ -1,3 +1,5 @@
+//Dupla: Kaike Dias Miranda e Kelson Eduardo de Carvalho Soares Filho
+
 #include <iostream>
 
 using namespace std;
